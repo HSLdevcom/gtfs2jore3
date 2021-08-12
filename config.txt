@@ -1,0 +1,26 @@
+{
+ "gtfspaketti": "gtfs.zip",
+ "booking": "21SYK",
+ "kausi": "Talvi 2021",
+ "kaavio": "7848",
+ "liikennöitsijä": "U/Porvoo",
+ "alkupvm": "20210816",
+ "loppupvm": "20220619",
+ "suunta2määränpäät": ["Helsinki", "Kamppi", "Kivistö"],
+  "yliajettavatpysakit": 
+  {
+  "18088": "5000230",
+  "1730": "9300204",
+  "s1156": "1040290",
+  "s8861": "9300204",
+  "18087": "5000229",
+  "1257": "9300260"
+   },
+ "tarkastelupäivät": 
+  {
+  "mato": "20210817",
+  "pe": "20210820",
+  "la": "20210821",
+   "su": "20210822"
+   }
+}
