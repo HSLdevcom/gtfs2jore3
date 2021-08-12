@@ -21,5 +21,5 @@ Changes Matkahuolto GTFS data (or any other GTFS data) to GIRO Hastus 2016 expor
 ## TODO
 - Special days doesn't have "lisä" notes
 - Trips that start between 00:00-04:30 are uploaded for the next day, not according to usual convention to previous day for hours 24:00->28:30
-- All stops that are Hastus places are marked as a Hastus places for a route errorneously.
+- All stops that are Hastus places are marked as a Hastus places for a route erroneously.
 - Allow configuring different data source for HSL's routes.
