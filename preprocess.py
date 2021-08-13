@@ -50,6 +50,7 @@ def modify_stops(configuration, stopcodelist, hastusplaces):
        hsl = hslstopor
        mh = mhstopor
        row[0] = hsl
+       matkahuoltotohsl.update({mh: hsl})
       else:
        try:
         hsl = stopcodelist[row[4]]
