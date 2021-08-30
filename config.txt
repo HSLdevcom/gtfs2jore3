@@ -2,8 +2,8 @@
  "gtfspaketti": "gtfs.zip",
  "booking": "21SYK",
  "kausi": "Talvi 2021",
- "kaavio": "7848",
- "liikennöitsijä": "U/Porvoo",
+ "kaavio": "7192",
+ "liikennöitsijä": "U/Amper",
  "alkupvm": "20210816",
  "loppupvm": "20220619",
  "suunta2määränpäät": ["Helsinki", "Kamppi", "Kivistö"],
@@ -14,7 +14,9 @@
   "s1156": "1040290",
   "s8861": "9300204",
   "18087": "5000229",
-  "1257": "9300260"
+  "1257": "9300260",
+  "38291": "6304001",
+  "38292": "6304000"
    },
  "tarkastelupäivät": 
   {

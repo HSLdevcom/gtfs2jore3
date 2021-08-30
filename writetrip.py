@@ -95,7 +95,7 @@ def getrouteparameters(tripid, ulines):
    if a[1] == tripid:
     result = []
     removenumbers = str(a[2]).maketrans('0123456789', '          ')
-    removeletters = str(a[2]).maketrans('ABTKLNX', '       ')
+    removeletters = str(a[2]).maketrans('ABTKLNXV', '        ')
     route = str(a[2]).translate(removeletters)
     route = route.replace(' ', '')
     route = str(7) + route
