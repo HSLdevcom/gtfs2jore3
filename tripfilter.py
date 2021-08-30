@@ -9,7 +9,7 @@ def listmatkahuoltocalendardates():
  matkahuoltodates = {}
  with open('config.txt', 'r') as configurationfile:
   configuration = json.load(configurationfile)
- dates = configuration["tarkastelupäivät"]
+ dates = configuration["tarkastelupaivat"]
  with open('tmp/calendar_dates.txt', 'r') as calendar:
   calendar = csv.reader(calendar,delimiter=',')
   for a in calendar:
@@ -26,13 +26,13 @@ def listmatkahuoltocalendardates():
 def getdirection2destinations():
  with open('config.txt', 'r') as configurationfile:
   configuration = json.load(configurationfile)
-  return configuration["suunta2määränpäät"]
+  return configuration["suunta2maaranpaat"]
 
 def getfridayonlyservice(serviceid):
  with open('config.txt', 'r') as configurationfile:
   configuration = json.load(configurationfile)
-  mato = configuration["tarkastelupäivät"]["mato"]
-  pe = configuration["tarkastelupäivät"]["pe"]
+  mato = configuration["tarkastelupaivat"]["mato"]
+  pe = configuration["tarkastelupaivat"]["pe"]
   with open('tmp/calendar_dates.txt', 'r') as caldates:
       caldates = csv.reader(caldates, delimiter=',')
       weekservice = []

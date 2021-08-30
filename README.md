@@ -9,7 +9,7 @@ Changes Matkahuolto GTFS data (or any other GTFS data) to GIRO Hastus 2016 expor
 ## How to use
 1. Fetch GTFS from operator. Most are available on [NAP](https://finap.fi). For example U453-U465 are [here](https://finap.fi/#/service/60/60).
 2. Save GTFS to the same folder as these scripts.
-3. Check config.txt and adjust as needed. You can add special days by adding those on "tarkastelupäivät". Use Jore3's special day codes, such as JU for Juhannuspäivä. For some routes it is required to add override values for stop codes that are conflicting or missing for HSL area in Matkahuolto's data. This is currently done for Kamppi, Porvoo and Metsäkyläntie.
+3. Check config.txt and adjust as needed. You can add special days by adding those on "tarkastelupaivat". Use Jore3's special day codes, such as JU for Juhannuspäivä. For some routes it is required to add override values for stop codes that are conflicting or missing for HSL area in Matkahuolto's data. This is currently done for Kamppi, Porvoo and Metsäkyläntie.
 4. Fetch all routes from Jore3, use Hastus 2016 format. Save it as a 7%.txt to this folder.
 5. Run gtfs2jore3.py
 6. Upload the generated files from folder results-to-be-uploaded to Jore.

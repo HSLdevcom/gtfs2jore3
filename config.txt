@@ -3,10 +3,10 @@
  "booking": "21SYK",
  "kausi": "Talvi 2021",
  "kaavio": "7192",
- "liikennöitsijä": "U/Amper",
+ "liikennoitsija": "U/Amper",
  "alkupvm": "20210816",
  "loppupvm": "20220619",
- "suunta2määränpäät": ["Helsinki", "Kamppi", "Kivistö"],
+ "suunta2maaranpaat": ["Helsinki", "Kamppi", "Kivistö"],
   "yliajettavatpysakit": 
   {
   "18088": "5000230",
@@ -18,7 +18,7 @@
   "38291": "6304001",
   "38292": "6304000"
    },
- "tarkastelupäivät": 
+ "tarkastelupaivat": 
   {
   "mato": "20210817",
   "pe": "20210820",

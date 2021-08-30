@@ -7,7 +7,7 @@ import json
 
 def alltripsgtfstohastus(configuration, date, datetype):
  kaavio = configuration['kaavio']
- liikennöitsijä = configuration['liikennöitsijä']
+ liikennoitsija = configuration['liikennoitsija']
  ulinelist = listulines()
  with open('tmp/trips-output.txt', 'r') as gtfstrips:
   gtfstrips = csv.reader(gtfstrips,delimiter=",")
@@ -38,7 +38,7 @@ def alltripsgtfstohastus(configuration, date, datetype):
       if datetype == 'pe':
        isfriday = a[7]
       output.append(['4', a[1][:6], str(kaavio) + str(a[1])[:6] ,None, fromhastus, tohastus, triproute,3,None,1])
-      output.append(['5', liikennöitsijä, a[1][:6], str(kaavio) + str(a[1])[:6], a[1][:6], '0', triproute, None, tripvariant, tripstarttime, tripendtime, tripduration, 3, 1, tripdistance, 0, isfriday, None, tripdirection, 1, 0, 0, 0])
+      output.append(['5', liikennoitsija, a[1][:6], str(kaavio) + str(a[1])[:6], a[1][:6], '0', triproute, None, tripvariant, tripstarttime, tripendtime, tripduration, 3, 1, tripdistance, 0, isfriday, None, tripdirection, 1, 0, 0, 0])
       for c in writestoprecord(a[1], tripdistance):
        output.append(c)
    for b in output:
