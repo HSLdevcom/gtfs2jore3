@@ -1,11 +1,12 @@
 {
  "gtfspaketti": "gtfs.zip",
- "booking": "21SYK",
- "kausi": "Talvi 2021",
- "kaavio": "7192",
- "liikennoitsija": "U/Amper",
- "alkupvm": "20210816",
- "loppupvm": "20220619",
+ "booking": "22SYK",
+ "kausi": "Talvi 2022",
+ "kaavio": "7455",
+ "liikennoitsija": "U/Korsi",
+ "alkupvm": "20230424",
+ "loppupvm": "20230604",
+ "digitransitapikey": "Insert your DigiTransit API key here",
  "suunta2maaranpaat": ["Helsinki", "Kamppi", "Kivistö"],
   "yliajettavatpysakit": 
   {
@@ -20,9 +21,9 @@
    },
  "tarkastelupaivat": 
   {
-  "mato": "20210817",
-  "pe": "20210820",
-  "la": "20210821",
-   "su": "20210822"
+  "mato": "20230427",
+  "pe": "20230428",
+  "la": "20230506",
+   "su": "20230507"
    }
 }

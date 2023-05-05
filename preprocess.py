@@ -88,7 +88,7 @@ def modify_stoptimes(matkahuoltotohsl):
 
 def preprocess_everything(configuration):
  init_folders_and_data(configuration)
- matkahuoltotohsl = modify_stops(configuration, getstops.query(), get_hastusplaces_for_stop())
+ matkahuoltotohsl = modify_stops(configuration, getstops.query(configuration), get_hastusplaces_for_stop())
  modify_stoptimes(matkahuoltotohsl)
  tripfilter.filtertrips()
 

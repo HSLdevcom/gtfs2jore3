@@ -3,7 +3,7 @@ import requests
 
 # Gets all stops from Digitransit API: Creates a dictionary where key is the short code and value is the long code.
 
-def query():
+def query(configuration):
  question = """
  {
   stops {
@@ -12,7 +12,7 @@ def query():
    }
  }
  """
- request = requests.post('https://api.digitransit.fi/routing/v1/routers/hsl/index/graphql', json={'query': question})
+ request = requests.post('https://api.digitransit.fi/routing/v1/routers/hsl/index/graphql?digitransit-subscription-key=' + configuration['digitransitapikey'], json={'query': question})
  if request.status_code== 200:
   pys = request.json()
   result = {}
