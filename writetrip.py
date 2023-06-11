@@ -94,8 +94,9 @@ def getrouteparameters(tripid, ulines):
   for a in routeslist:
    if a[1] == tripid:
     result = []
-    removenumbers = str(a[2]).maketrans('0123456789', '          ')
-    removeletters = str(a[2]).maketrans('ABTKLNXV', '        ')
+#Blacklists F as well as numbers due to Onnibus Flex tendency to add F in front of line code. This also means that bus line with a variant letter F, such as 455F, won't work. At the moment no such variant exists
+    removenumbers = str(a[2]).maketrans('0123456789F', '           ')
+    removeletters = str(a[2]).maketrans('ABCDFGHIJKLNMOPQRSTUVXVZÅÄÖ', '                           ')
     route = str(a[2]).translate(removeletters)
     route = route.replace(' ', '')
     route = str(7) + route
