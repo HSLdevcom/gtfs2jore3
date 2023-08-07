@@ -2,47 +2,69 @@
 import os
 import csv
 from datetime import datetime
+from datetime import time
 from datetime import timedelta
 import json
 
-def alltripsgtfstohastus(configuration, date, datetype):
- kaavio = configuration['kaavio']
- liikennoitsija = configuration['liikennoitsija']
+def alltripsgtfstohastus(configuration, date, nextdate, datetype):
+ vehicleschedule = configuration['kaavio']
+ operator = configuration['liikennoitsija']
  ulinelist = listulines()
  with open('tmp/trips-output.txt', 'r') as gtfstrips:
   gtfstrips = csv.reader(gtfstrips,delimiter=",")
-  with open('tmp/trips-' + str(date) + '.txt', 'w',encoding="latin-1") as joretrips:
-   joretrips = csv.writer(joretrips,delimiter=";")
-   output = []
-   for a in gtfstrips:
-    if str(a[2]) == str(date):
+#  with open('tmp/trips-' + str(date) + '.txt', 'w',encoding="latin-1") as joretrips:
+#   joretrips = csv.writer(joretrips,delimiter=";")
+  output = []
+  for a in gtfstrips:
+   if str(a[2]) == str(date) and datetime.strptime(a[5], "%H%M") >= datetime.strptime("0430", "%H%M"):
+    output += writetotripoutput(False, ulinelist, datetype, vehicleschedule, operator, a)
+   if str(a[2]) == str(nextdate) and datetime.strptime(a[5], "%H%M") < datetime.strptime("0430", "%H%M"):
+    output += writetotripoutput(True, ulinelist, datetype, vehicleschedule, operator, a)
+ return output
+
+def writetotripoutput(nocturnaltrip, ulinelist, datetype, vehicleschedule, operator, a):
 #Row 4 requires Jore3 Hastus place codes, getstoptimesparameters determines those and returns a list of first and last hastus place as well as distance, duration etc which are also available
-     stoptimesparameters = getstoptimesparameters(a[1])
-     fromhastus = stoptimesparameters[0]
-     tohastus = stoptimesparameters[1]
-     tripdistance = stoptimesparameters[2]
+#Output is lines required for one trip for jore export file
+ output = []
+ stoptimesparameters = getstoptimesparameters(a[1])
+ fromhastus = stoptimesparameters[0]
+ tohastus = stoptimesparameters[1]
+ tripdistance = stoptimesparameters[2]
 #calculate trip duration, needs some modification to cope with more than 24 hour clock
-     tripendtime = joretime(str(stoptimesparameters[4]))
-     tripstarttime = joretime(str(stoptimesparameters[3]))
-     tripduration = tripendtime - tripstarttime
-     tripendtime = str(tripendtime)[11:][:5]
-     tripstarttime = str(tripstarttime)[11:][:5]
-     tripduration = int(tripduration.total_seconds() / 60)
+ tripendtime = joretime(str(stoptimesparameters[4]))
+ tripstarttime = joretime(str(stoptimesparameters[3]))
+ tripduration = tripendtime - tripstarttime
+ tripduration = int(round(tripduration.total_seconds()/60))
+#this is for trip start times before midnight
+ if nocturnaltrip == False:
+  tripendtime = str(tripendtime)[11:][:5]
+  tripstarttime = str(tripstarttime)[11:][:5]
+#and this is for midnight trips from the "next day"
+ else:
+  tripendtime = str(tripendtime)[11:][:5]
+  newendhour = int(tripendtime[:2]) + 24
+  tripendtime = str(newendhour) + tripendtime[2:]
+  tripstarttime = str(tripstarttime)[11:][:5]
+  newstarthour = int(tripstarttime[:2]) + 24
+  tripstarttime = str(newstarthour) + tripstarttime[2:]
+  nocturnaltrip = True
 #Trip route and variant is in routes.txt gtfs file
-     tripdetails = getrouteparameters(a[1], ulinelist)
-     triproute = tripdetails[0]
-     if triproute != None:
-      tripvariant = tripdetails[1]
-      tripdirection = int(a[6])
-      isfriday = None
-      if datetype == 'pe':
-       isfriday = a[7]
-      output.append(['4', a[1][:6], str(kaavio) + str(a[1])[:6] ,None, fromhastus, tohastus, triproute,3,None,1])
-      output.append(['5', liikennoitsija, a[1][:6], str(kaavio) + str(a[1])[:6], a[1][:6], '0', triproute, None, tripvariant, tripstarttime, tripendtime, tripduration, 3, 1, tripdistance, 0, isfriday, None, tripdirection, 1, 0, 0, 0])
-      for c in writestoprecord(a[1], tripdistance):
-       output.append(c)
-   for b in output:
-       joretrips.writerow(b)
+ tripdetails = getrouteparameters(a[1], ulinelist)
+ triproute = tripdetails[0]
+ if triproute != None:
+  tripvariant = tripdetails[1]
+  tripdirection = int(a[6])
+  isfriday = None
+  if datetype == 'pe':
+   isfriday = a[7]
+  output.append(['4', a[1][:6], str(vehicleschedule) + str(a[1])[:6] ,None, fromhastus, tohastus, triproute,3,None,1])
+  output.append(['5', operator, a[1][:6], str(vehicleschedule) + str(a[1])[:6], a[1][:6], '0', triproute, None, tripvariant, tripstarttime, tripendtime, tripduration, 3, 1, tripdistance, 0, isfriday, None, tripdirection, 1, 0, 0, 0])
+  for c in writestoprecord(a[1], tripdistance, nocturnaltrip):
+   output.append(c)
+ return output
+
+# for b in output:
+#  joretrips.writerow(b)
 
 def joretime(time):
     hours, rest = time.split(':', 1)
@@ -56,7 +78,7 @@ def gethastuspaikkaforstop(stopcode):
             if b[0] == stopcode:
                 return b[5]
 
-def writestoprecord(tripid, distance):
+def writestoprecord(tripid, distance, nocturnal):
  with open('tmp/stop_times-output.txt', 'r') as stoptimeslist:
   stoptimeslist = csv.reader(stoptimeslist,delimiter=',')
   result = []
@@ -72,6 +94,9 @@ def writestoprecord(tripid, distance):
     makejustintegerfromtime = dict.fromkeys(map(ord, ':'), None)
     stoptime = a[3].translate(makejustintegerfromtime)[:-2]
     hastuspaikka = gethastuspaikkaforstop(a[1])
+    if nocturnal == True:
+     hour = int(str(stoptime)[:2]) + 24
+     stoptime = str(hour) + str(stoptime)[2:]
     if hastuspaikka != '':
      if str(a[8]) == str(distance) or str(a[8]) == str(0.0):
       tstpstopcode = 'T'
@@ -157,7 +182,7 @@ def getstoptimesparameters(tripid):
      result[0] = c[5]
    if result[1] == c[0]:
      result[1] = c[5]
- return(result)
+ return result
 
 if __name__ == "__main__":
  import sys

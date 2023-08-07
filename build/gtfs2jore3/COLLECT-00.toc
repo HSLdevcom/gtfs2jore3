@@ -1,5 +1,5 @@
 ([('gtfs2jore3.exe',
-   'Y:\\home\\fso\\gtfs2jore3\\build\\gtfs2jore3\\gtfs2jore3.exe',
+   'D:\\uusiversiogtfs2jore3\\gtfs2jore3\\build\\gtfs2jore3\\gtfs2jore3.exe',
    'EXECUTABLE'),
   ('python311.dll',
    'C:\\Program '
@@ -33,23 +33,13 @@
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1264.0_x64__qbz5n2kfra8p0\\DLLs\\_socket.pyd',
    'EXTENSION'),
-  ('unicodedata.pyd',
-   'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1264.0_x64__qbz5n2kfra8p0\\DLLs\\unicodedata.pyd',
-   'EXTENSION'),
   ('_ssl.pyd',
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1264.0_x64__qbz5n2kfra8p0\\DLLs\\_ssl.pyd',
    'EXTENSION'),
-  ('_queue.pyd',
+  ('unicodedata.pyd',
    'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1264.0_x64__qbz5n2kfra8p0\\DLLs\\_queue.pyd',
-   'EXTENSION'),
-  ('charset_normalizer\\md__mypyc.cp311-win_amd64.pyd',
-   'C:\\Users\\Ossi\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\charset_normalizer\\md__mypyc.cp311-win_amd64.pyd',
-   'EXTENSION'),
-  ('charset_normalizer\\md.cp311-win_amd64.pyd',
-   'C:\\Users\\Ossi\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\charset_normalizer\\md.cp311-win_amd64.pyd',
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1264.0_x64__qbz5n2kfra8p0\\DLLs\\unicodedata.pyd',
    'EXTENSION'),
   ('libcrypto-1_1.dll',
    'C:\\Program '
@@ -60,11 +50,5 @@
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1264.0_x64__qbz5n2kfra8p0\\DLLs\\libssl-1_1.dll',
    'BINARY'),
   ('base_library.zip',
-   'Y:\\home\\fso\\gtfs2jore3\\build\\gtfs2jore3\\base_library.zip',
-   'DATA'),
-  ('certifi\\py.typed',
-   'C:\\Users\\Ossi\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\certifi\\py.typed',
-   'DATA'),
-  ('certifi\\cacert.pem',
-   'C:\\Users\\Ossi\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\certifi\\cacert.pem',
+   'D:\\uusiversiogtfs2jore3\\gtfs2jore3\\build\\gtfs2jore3\\base_library.zip',
    'DATA')],)
