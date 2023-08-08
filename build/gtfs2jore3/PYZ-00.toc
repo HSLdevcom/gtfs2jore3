@@ -1,4 +1,4 @@
-('D:\\uusiversiogtfs2jore3\\gtfs2jore3\\build\\gtfs2jore3\\PYZ-00.pyz',
+('D:\\Softa\\gtfs2jore3 – kopio\\build\\gtfs2jore3\\PYZ-00.pyz',
  [('__future__',
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1264.0_x64__qbz5n2kfra8p0\\Lib\\__future__.py',
@@ -216,7 +216,7 @@
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1264.0_x64__qbz5n2kfra8p0\\Lib\\getpass.py',
    'PYMODULE'),
-  ('getstops', 'D:\\uusiversiogtfs2jore3\\gtfs2jore3\\getstops.py', 'PYMODULE'),
+  ('getstops', 'D:\\Softa\\gtfs2jore3 – kopio\\getstops.py', 'PYMODULE'),
   ('gettext',
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1264.0_x64__qbz5n2kfra8p0\\Lib\\gettext.py',
@@ -411,9 +411,7 @@
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1264.0_x64__qbz5n2kfra8p0\\Lib\\pprint.py',
    'PYMODULE'),
-  ('preprocess',
-   'D:\\uusiversiogtfs2jore3\\gtfs2jore3\\preprocess.py',
-   'PYMODULE'),
+  ('preprocess', 'D:\\Softa\\gtfs2jore3 – kopio\\preprocess.py', 'PYMODULE'),
   ('py_compile',
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1264.0_x64__qbz5n2kfra8p0\\Lib\\py_compile.py',
@@ -541,9 +539,7 @@
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1264.0_x64__qbz5n2kfra8p0\\Lib\\tracemalloc.py',
    'PYMODULE'),
-  ('tripfilter',
-   'D:\\uusiversiogtfs2jore3\\gtfs2jore3\\tripfilter.py',
-   'PYMODULE'),
+  ('tripfilter', 'D:\\Softa\\gtfs2jore3 – kopio\\tripfilter.py', 'PYMODULE'),
   ('typing',
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1264.0_x64__qbz5n2kfra8p0\\Lib\\typing.py',
@@ -632,9 +628,7 @@
   ('urllib3.util.wait',
    'C:\\Users\\fso_p\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\urllib3\\util\\wait.py',
    'PYMODULE'),
-  ('writetrip',
-   'D:\\uusiversiogtfs2jore3\\gtfs2jore3\\writetrip.py',
-   'PYMODULE'),
+  ('writetrip', 'D:\\Softa\\gtfs2jore3 – kopio\\writetrip.py', 'PYMODULE'),
   ('zipfile',
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.1264.0_x64__qbz5n2kfra8p0\\Lib\\zipfile.py',

@@ -3,6 +3,7 @@ import os
 import sys
 import fileinput
 import getstops
+from datetime import datetime
 import tripfilter
 import json
 import csv
@@ -40,7 +41,7 @@ def modify_stops(configuration, stopcodelist, hastusplaces):
   with open('stops-output.txt', 'w', newline='') as stopsoutput:
    stopsoutput = csv.writer(stopsoutput, delimiter=',')
    for row in stopsgtfs:
-# Prints header
+# Prints a header
     if counter == 0:
      stopsoutput.writerow(row)
      counter =+ 1
@@ -86,11 +87,71 @@ def modify_stoptimes(matkahuoltotohsl):
     counter =+ 1
  os.chdir("..")
 
+def listulines():
+ with open('7%.txt', 'r', encoding='latin-1') as ulines:
+  ulines = csv.reader(ulines,delimiter=';')
+  ulinelist = []
+  for c in ulines:
+   if c[0] == "rvariant":
+    uline = str(c[5])
+    uline = uline[:-1]
+    ulinelist.append(uline)
+  with open('tmp/ulinelist.txt', 'w') as output:
+   for a in ulinelist:
+    output.write(a + '\n')
+
+def fridaynighttrips():
+ with open('config.txt', 'r') as configurationfile:
+  configuration = json.load(configurationfile)
+  mato = configuration["tarkastelupaivat"]["mato"]
+  pe = configuration["tarkastelupaivat"]["pe"]
+  la = configuration["tarkastelupaivat"]["la"]
+  with open('tmp/trips-output-phase1.txt', 'r', newline='') as tripsoutput:
+   gtfstrips = csv.reader(tripsoutput,delimiter=",")
+#  with open('tmp/trips-' + str(date) + '.txt', 'w',encoding="latin-1") as joretrips:
+#   joretrips = csv.writer(joretrips,delimiter=";")
+   frisatnighttrips = []
+   for a in gtfstrips:
+    if str(a[2]) == str(la) and datetime.strptime(a[5], "%H%M") < datetime.strptime("0430", "%H%M"):
+     frisatnighttrips.append(a[1])
+
+   with open('tmp/calendar_dates.txt', 'r') as caldates:
+    caldates = csv.reader(caldates, delimiter=',')
+    weekservice = []
+    fridayservice = []
+    for g in caldates:
+     if g[1] == pe:
+      fridayservice.append(g[0])
+     if g[1] == mato:
+      weekservice.append(g[0])
+   fridayonlyservice = list(set(fridayservice) - set(weekservice))
+   for a in frisatnighttrips:
+    fridayonlyservice.append(a)
+#   print(fridayonlyservice)
+ with open('tmp/trips-output.txt', 'w', newline='') as trips:
+  with open('tmp/trips-output-phase1.txt', 'r', newline='') as phase1:
+   phase1 = csv.reader(phase1,delimiter=",")
+   for b in phase1:
+    for q in fridayonlyservice:
+     towrite = b
+     if b[1] == q:
+      towrite[7] = 'p'
+      pass
+    output = csv.writer(trips,delimiter=",")
+    output.writerow(towrite)
+
+# with open('tmp/fridayservice.txt', "w") as output:
+#  for a in fridayonlyservice:
+#   output.write(a)
+#   output.write('\n')
+
 def preprocess_everything(configuration):
  init_folders_and_data(configuration)
  matkahuoltotohsl = modify_stops(configuration, getstops.query(configuration), get_hastusplaces_for_stop())
  modify_stoptimes(matkahuoltotohsl)
+ listulines()
  tripfilter.filtertrips()
+ fridaynighttrips()
 
 if __name__ == "__main__":
  with open('config.txt', 'r') as configurationfile:

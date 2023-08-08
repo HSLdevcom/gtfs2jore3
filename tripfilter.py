@@ -28,32 +28,19 @@ def getdirection2destinations():
   configuration = json.load(configurationfile)
   return configuration["suunta2maaranpaat"]
 
-def getfridayonlyservice(serviceid):
- with open('config.txt', 'r') as configurationfile:
-  configuration = json.load(configurationfile)
-  mato = configuration["tarkastelupaivat"]["mato"]
-  pe = configuration["tarkastelupaivat"]["pe"]
-  with open('tmp/calendar_dates.txt', 'r') as caldates:
-      caldates = csv.reader(caldates, delimiter=',')
-      weekservice = []
-      fridayservice = []
-      for g in caldates:
-          if g[1] == pe:
-              fridayservice.append(g[0])
-          if g[1] == mato:
-              weekservice.append(g[0])
- fridayonlyservice = list(set(fridayservice) - set(weekservice))
- for z in fridayonlyservice:
-     if z == serviceid:
-        return 'p'
-     else:
-        return None
+#def getfridayonlyservice(serviceid):
+# with open('tmp/fridayservice.txt', 'r') as fridayservice:
+#  for z in fridayservice:
+#   z = z.strip()
+#   if z == serviceid:
+#    return True
+# return False
 
 #Fill trips-output with U-lines only and fix directions as well as imput notes for fridays
 def filtertrips():
  with open('tmp/trips.txt', newline='') as tripsgtfs:
   tripsgtfs = csv.reader(tripsgtfs, delimiter=',')
-  with open('tmp/trips-output.txt', 'w', newline='') as tripsoutput:
+  with open('tmp/trips-output-phase1.txt', 'w', newline='') as tripsoutput:
    tripsoutput = csv.writer(tripsoutput, delimiter=',')
    counter = 0
    for row in tripsgtfs:
@@ -66,9 +53,9 @@ def filtertrips():
 #     print(validroutes)
       validdates = listmatkahuoltocalendardates()
       direction2destinations = getdirection2destinations()
-      friday = getfridayonlyservice(row[2])
-      if friday == 'p':
-       row[7] = 'p'
+#      friday = getfridayonlyservice(row[2])
+#      if friday == True:
+#       row[7] = 'p'
       for b in validdates.items():
        if b[0] == row[2]:
         for k in b[1]:

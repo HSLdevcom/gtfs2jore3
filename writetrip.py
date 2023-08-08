@@ -136,15 +136,12 @@ def getrouteparameters(tripid, ulines):
  return [None, None]
 
 def listulines():
- with open('7%.txt', 'r', encoding='latin-1') as ulines:
-  ulines = csv.reader(ulines,delimiter=';')
-  ulinelist = []
-  for c in ulines:
-   if c[0] == "rvariant":
-    uline = str(c[5])
-    uline = uline[:-1]
-    ulinelist.append(uline)
-  return ulinelist
+ output = []
+ with open('tmp/ulinelist.txt', 'r') as ulines:
+  for line in ulines:
+   line = line.strip()
+   output.append(line)
+ return output
 
 def getstoptimesparameters(tripid):
  with open('tmp/stops-output.txt', 'r') as stopslist:
