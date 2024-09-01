@@ -1,4 +1,5 @@
-('D:\\Softa\\gtfs2jore3 – kopio\\build\\gtfs2jore3\\gtfs2jore3.exe',
+('D:\\softa\\2024-08 '
+ 'gtfsjore3\\gtfs2jore3-main\\build\\gtfs2jore3\\gtfs2jore3.exe',
  True,
  False,
  True,
@@ -13,28 +14,31 @@
  None,
  None,
  None,
- 'D:\\Softa\\gtfs2jore3 – kopio\\build\\gtfs2jore3\\gtfs2jore3.pkg',
+ 'D:\\softa\\2024-08 '
+ 'gtfsjore3\\gtfs2jore3-main\\build\\gtfs2jore3\\gtfs2jore3.pkg',
  [('PYZ-00.pyz',
-   'D:\\Softa\\gtfs2jore3 – kopio\\build\\gtfs2jore3\\PYZ-00.pyz',
+   'D:\\softa\\2024-08 '
+   'gtfsjore3\\gtfs2jore3-main\\build\\gtfs2jore3\\PYZ-00.pyz',
    'PYZ'),
   ('struct',
-   'D:\\Softa\\gtfs2jore3 – kopio\\build\\gtfs2jore3\\localpycs\\struct.pyc',
+   'D:\\softa\\2024-08 '
+   'gtfsjore3\\gtfs2jore3-main\\build\\gtfs2jore3\\localpycs\\struct.pyc',
    'PYMODULE'),
   ('pyimod01_archive',
-   'D:\\Softa\\gtfs2jore3 – '
-   'kopio\\build\\gtfs2jore3\\localpycs\\pyimod01_archive.pyc',
+   'D:\\softa\\2024-08 '
+   'gtfsjore3\\gtfs2jore3-main\\build\\gtfs2jore3\\localpycs\\pyimod01_archive.pyc',
    'PYMODULE'),
   ('pyimod02_importers',
-   'D:\\Softa\\gtfs2jore3 – '
-   'kopio\\build\\gtfs2jore3\\localpycs\\pyimod02_importers.pyc',
+   'D:\\softa\\2024-08 '
+   'gtfsjore3\\gtfs2jore3-main\\build\\gtfs2jore3\\localpycs\\pyimod02_importers.pyc',
    'PYMODULE'),
   ('pyimod03_ctypes',
-   'D:\\Softa\\gtfs2jore3 – '
-   'kopio\\build\\gtfs2jore3\\localpycs\\pyimod03_ctypes.pyc',
+   'D:\\softa\\2024-08 '
+   'gtfsjore3\\gtfs2jore3-main\\build\\gtfs2jore3\\localpycs\\pyimod03_ctypes.pyc',
    'PYMODULE'),
   ('pyimod04_pywin32',
-   'D:\\Softa\\gtfs2jore3 – '
-   'kopio\\build\\gtfs2jore3\\localpycs\\pyimod04_pywin32.pyc',
+   'D:\\softa\\2024-08 '
+   'gtfsjore3\\gtfs2jore3-main\\build\\gtfs2jore3\\localpycs\\pyimod04_pywin32.pyc',
    'PYMODULE'),
   ('pyiboot01_bootstrap',
    'C:\\Users\\fso_p\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\PyInstaller\\loader\\pyiboot01_bootstrap.py',
@@ -42,11 +46,13 @@
   ('pyi_rth_inspect',
    'C:\\Users\\fso_p\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_inspect.py',
    'PYSOURCE'),
-  ('gtfs2jore3', 'D:\\Softa\\gtfs2jore3 – kopio\\gtfs2jore3.py', 'PYSOURCE')],
+  ('gtfs2jore3',
+   'D:\\Softa\\2024-08 gtfsjore3\\gtfs2jore3-main\\gtfs2jore3.py',
+   'PYSOURCE')],
  [],
  False,
  False,
- 1691509799,
+ 1725197187,
  [('run.exe',
    'C:\\Users\\fso_p\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\PyInstaller\\bootloader\\Windows-64bit-intel\\run.exe',
    'EXECUTABLE')])
