@@ -12,7 +12,7 @@ def query(configuration):
    }
  }
  """
- request = requests.post('https://api.digitransit.fi/routing/v1/routers/hsl/index/graphql?digitransit-subscription-key=' + configuration['digitransitapikey'], json={'query': question})
+ request = requests.post('https://api.digitransit.fi/routing/v2/hsl/gtfs/v1?digitransit-subscription-key=' + configuration['digitransitapikey'], json={'query': question})
  if request.status_code== 200:
   pys = request.json()
   result = {}

@@ -35,6 +35,7 @@ missing module named cryptography - imported by urllib3.contrib.pyopenssl (top-l
 missing module named 'OpenSSL.crypto' - imported by urllib3.contrib.pyopenssl (delayed, conditional)
 missing module named 'cryptography.x509' - imported by urllib3.contrib.pyopenssl (delayed, optional)
 missing module named OpenSSL - imported by urllib3.contrib.pyopenssl (top-level)
+missing module named chardet - imported by requests.compat (optional), requests (optional), requests.packages (optional)
 missing module named urllib3_secure_extra - imported by urllib3 (optional)
 missing module named _posixsubprocess - imported by subprocess (conditional)
 missing module named fcntl - imported by subprocess (optional)

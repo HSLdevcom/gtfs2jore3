@@ -1,6 +1,5 @@
 ([('gtfs2jore3.exe',
-   'D:\\softa\\2024-08 '
-   'gtfsjore3\\gtfs2jore3-main\\build\\gtfs2jore3\\gtfs2jore3.exe',
+   'D:\\gtfs2jore3\\gtfs2jore3-main\\build\\gtfs2jore3\\gtfs2jore3.exe',
    'EXECUTABLE'),
   ('python311.dll',
    'C:\\Program '
@@ -34,23 +33,23 @@
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\DLLs\\_socket.pyd',
    'EXTENSION'),
-  ('_ssl.pyd',
-   'C:\\Program '
-   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\DLLs\\_ssl.pyd',
-   'EXTENSION'),
   ('unicodedata.pyd',
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\DLLs\\unicodedata.pyd',
+   'EXTENSION'),
+  ('_ssl.pyd',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\DLLs\\_ssl.pyd',
    'EXTENSION'),
   ('_queue.pyd',
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\DLLs\\_queue.pyd',
    'EXTENSION'),
   ('charset_normalizer\\md__mypyc.cp311-win_amd64.pyd',
-   'C:\\Users\\fso_p\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\charset_normalizer\\md__mypyc.cp311-win_amd64.pyd',
+   'C:\\Users\\Ossi\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\charset_normalizer\\md__mypyc.cp311-win_amd64.pyd',
    'EXTENSION'),
   ('charset_normalizer\\md.cp311-win_amd64.pyd',
-   'C:\\Users\\fso_p\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\charset_normalizer\\md.cp311-win_amd64.pyd',
+   'C:\\Users\\Ossi\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\charset_normalizer\\md.cp311-win_amd64.pyd',
    'EXTENSION'),
   ('libcrypto-3.dll',
    'C:\\Program '
@@ -61,12 +60,11 @@
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\\DLLs\\libssl-3.dll',
    'BINARY'),
   ('base_library.zip',
-   'D:\\softa\\2024-08 '
-   'gtfsjore3\\gtfs2jore3-main\\build\\gtfs2jore3\\base_library.zip',
+   'D:\\gtfs2jore3\\gtfs2jore3-main\\build\\gtfs2jore3\\base_library.zip',
    'DATA'),
   ('certifi\\py.typed',
-   'C:\\Users\\fso_p\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\certifi\\py.typed',
+   'C:\\Users\\Ossi\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\certifi\\py.typed',
    'DATA'),
   ('certifi\\cacert.pem',
-   'C:\\Users\\fso_p\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\certifi\\cacert.pem',
+   'C:\\Users\\Ossi\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\certifi\\cacert.pem',
    'DATA')],)
